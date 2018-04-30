@@ -4,11 +4,10 @@ import json
 from os import listdir
 from os.path import isfile, join
 
-filepath = 'C:/Users/abad_/Downloads/Data Mining/Lemmadas/'
-
 # Getting stopwords from nltk
 stop_words = set( stopwords.words('spanish') )
 
+# File path of processed words
 filepath = 'Files/DataJson/'
 
 # Getting names of all the files in the lemma folder

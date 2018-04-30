@@ -4,7 +4,7 @@ from os.path import isfile, join
 import math
 
 # Set the file path of our cleaned words files
-filepath = "C:/Users/abad_/Downloads/Data Mining/Limpiadas/"
+filepath = "Files/Cleaned/"
 
 # Getting names of all the files in the cleaned folder
 onlyfiles = [f for f in listdir(filepath) if isfile(join(filepath, f))]
@@ -32,7 +32,7 @@ def whatisthis(s):
         print "not a string"
 
 # Looping every document again to calculate weights
-with open('C:/Users/abad_/Downloads/Data Mining/Pesadas/totalWeights.csv', 'w') as csv:
+with open('Files/Weighted/totalWeights.csv', 'w') as csv:
 
     # First line in csv file
     csv.write( u'files,' + u','.join(globalFreqs.keys()).encode('ascii', 'backslashreplace')  )
@@ -63,6 +63,6 @@ with open('C:/Users/abad_/Downloads/Data Mining/Pesadas/totalWeights.csv', 'w') 
         csv.write("\n")
 
         # Saving files
-        with open('C:/Users/abad_/Downloads/Data Mining/Pesadas/' + filename, 'w') as outfile:
+        with open('Files/Weighted/' + filename, 'w') as outfile:
             json.dump(total_weights, outfile)
 
