@@ -23,18 +23,46 @@ for filename in onlyfiles:
         else:
             globalFreqs[key] += 1
 
+def whatisthis(s):
+    if isinstance(s, str):
+        print "ordinary string"
+    elif isinstance(s, unicode):
+        print "unicode string"
+    else:
+        print "not a string"
+
 # Looping every document again to calculate weights
-for filename in onlyfiles:
-    data = json.load(open(filepath + filename))
+with open('C:/Users/abad_/Downloads/Data Mining/Pesadas/totalWeights.csv', 'w') as csv:
 
-    # Looping every word and getting it's weight
-    total_weights = {}
-    for key in data:
-        tf = data[key]
-        df = globalFreqs[key]
-        weight = tf *  math.log1p(len(onlyfiles)/df)
-        total_weights[key] = weight
+    # First line in csv file
+    csv.write( u'files,' + u','.join(globalFreqs.keys()).encode('ascii', 'backslashreplace')  )
+    csv.write("\n")
 
-    # Saving files
-    with open('C:/Users/abad_/Downloads/Data Mining/Pesadas/' + filename, 'w') as outfile:
-        json.dump(total_weights, outfile)
+    # Every file in the folder
+    for filename in onlyfiles:
+        data = json.load(open(filepath + filename))
+
+        # Looping every word and getting it's weight
+        total_weights = {}
+        weight_str = ""
+        for key in data:
+            tf = data[key]
+            df = globalFreqs[key]
+            weight = tf *  math.log1p(len(onlyfiles)/df)
+            total_weights[key] = weight
+
+        # Checking the weights of the file onto the csv file
+        for k in globalFreqs:
+            if k in data:
+                weight_str += str(total_weights[k]) + ","
+            else:
+                weight_str += "0,"
+
+        # Write into the csv
+        csv.write( filename + "," + weight_str )
+        csv.write("\n")
+
+        # Saving files
+        with open('C:/Users/abad_/Downloads/Data Mining/Pesadas/' + filename, 'w') as outfile:
+            json.dump(total_weights, outfile)
+
