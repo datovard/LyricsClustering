@@ -5,6 +5,18 @@ Using Clustering' by Fabio Leonardo Parra and Elizabeth León
 
 ## Files
 
-### cleanStopwords
+### cleanLyrics.py
 
-This file cleans the words that have been already processed in the *Lyrics Feature Extraction* of *Part-of-Speech*(*POS*)
+This file takes the lyrics and clean them, eliminates words with two or less characters and removes the words that are found in a banned words list. 
+
+### processPOS.py
+
+This file takes the files that were processed with *Part-of-Speech*(*POS*) using [Freeling Software](http://nlp.lsi.upc.edu/freeling/demo/demo.php) and creates the processed words with the frequencies that each one have in it's lyrics file
+
+### cleanStopwords.py
+
+This file cleans the words that have been already processed in the *Lyrics Feature Extraction* of *Part-of-Speech*(*POS*) removing all stopwords found in each lyrics file, using an standard stopwords list found in the NLTK package
+
+### calculateTDIDF.py
+
+This file takes every word in every document and calculates it's weights, it creates a weight matrix in a csv file called totalWeights.csv
