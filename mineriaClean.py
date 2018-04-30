@@ -30,9 +30,9 @@ print "\n\nLemma done succesfully."
 #Import files
 files = (glob.glob("files/POS-Freeling/*"))
 c = 0
-d = {}
 #Import Lemma files from Freeling Software
 for file in files:
+    d = {}
     filename = file[file.rfind("/") + 1:]
     filename_small = filename.replace(".txt", ".json")
     with open(file, 'r') as f:
