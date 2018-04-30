@@ -21,3 +21,4 @@ This file cleans the words that have been already processed in the *Lyrics Featu
 
 This file takes every word in every document and calculates it's weights using the TD-IDF function, it creates a weight matrix in a csv file called totalWeights.csv.
 
+![alt text](https://github.com/datovard/LyricsClustering/blob/joagranadosme/Images/equation.JPG "TD-IDF equation")
