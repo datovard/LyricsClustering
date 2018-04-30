@@ -5,6 +5,8 @@ import operator
 h = {}
 files = (glob.glob("files/DataJson/*"))
 
+files = sorted(files)
+
 cluster = [0,5,6,5,5,3,2,4,6,6,4,1,1,0,2,3]
 
 final = {}
@@ -26,5 +28,4 @@ for file in files:
 
 for h in final:
     print h, sorted(final[h].items(), key=operator.itemgetter(1))
-
 
