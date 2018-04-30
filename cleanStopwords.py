@@ -4,17 +4,19 @@ import json
 from os import listdir
 from os.path import isfile, join
 
+filepath = 'C:/Users/abad_/Downloads/Data Mining/Lemmadas/'
+
 # Getting stopwords from nltk
 stop_words = set( stopwords.words('spanish') )
 
 # Getting names of all the files in the lemma folder
-onlyfiles = [f for f in listdir('C:/Users/abad_/Downloads/Data Mining/Lemmadas/') if isfile(join('C:/Users/abad_/Downloads/Data Mining/Lemmadas/', f))]
+onlyfiles = [f for f in listdir(filepath) if isfile(join(filepath, f))]
 
 # Looping all files in folder
 for filename in onlyfiles:
 
     # Get the words of the file
-    data = json.load( open('C:/Users/abad_/Downloads/Data Mining/Lemmadas/' + filename) )
+    data = json.load( open(filepath + filename) )
     word_tokens = data.keys()
 
     # Cutting the stopwords from the words array
