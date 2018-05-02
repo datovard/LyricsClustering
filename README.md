@@ -28,7 +28,7 @@ is the number of documents in the collection that term `t` occurs in.
 
 ## Exercise
 
-You already have the lyrics processed with a POS software, so you don't have to pre-processany lyrics with cleanLyrics.py and processPOS.py for this example.
+You already have the lyrics processed with a POS software, so you don't have to pre-process any lyrics with cleanLyrics.py and processPOS.py for this example.
 
 You have to do this in order to get a test of the clustering process:
 
