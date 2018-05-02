@@ -7,9 +7,24 @@ files = (glob.glob("files/DataJson/*"))
 
 files = sorted(files)
 
-cluster = [0,5,6,5,5,3,2,4,6,6,4,1,1,0,2,3]
+cluster = [4,0,3,5,1,5,2,2,0,6,1,6,4,3,6,5]
 
 final = {}
+
+def print_cluster( id, cluster ):
+    print "Cluster: ", id
+
+    row = ""
+    counter = 0
+    for item in cluster:
+        row += item[0] + "\t"
+        counter += 1
+        if counter == 10:
+            print row
+            row = ""
+            counter = 0
+    print row
+    print "\n"
 
 counter = 0
 for file in files:
@@ -26,6 +41,8 @@ for file in files:
                 final[cluster[counter]][w] += 1
     counter+=1
 
+
+
 for h in final:
-    print h, sorted(final[h].items(), key=operator.itemgetter(1))
+     print_cluster( h, sorted(final[h].items(), key=operator.itemgetter(1)) )
 

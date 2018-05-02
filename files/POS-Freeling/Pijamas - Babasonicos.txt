@@ -76,9 +76,9 @@ RG
 noche
 noche
 NCFS000
-Por
 por
-NP00000
+por
+SP
 única
 único
 AQ0FS00
@@ -223,9 +223,9 @@ RG
 noche
 noche
 NCFS000
-Por
 por
-NP00000
+por
+SP
 cama
 cama
 NCFS000
@@ -268,9 +268,9 @@ VMIP3S0
 canta
 cantar
 VMIP3S0
-Por
 por
-NP00000
+por
+SP
 única
 único
 AQ0FS00
@@ -337,9 +337,9 @@ CS
 entiendas
 entender
 VMSP2S0
-Corro
 corro
-NP00000
+corro
+NCMS000
 espantado
 espantar
 VMP00SM

@@ -1,12 +1,12 @@
-Abandonado
+abandonado
 abandonar
 VMP00SM
 estoy
 estar
 VMIP1S0
-Dios
 dios
-NP00000
+dios
+NCMS000
 soy
 ser
 VSIP1S0
@@ -112,9 +112,9 @@ AQ0FS00
 plantado
 plantar
 VMP00SM
-Abandonado
 abandonado
-NP00000
+abandonar
+VMP00SM
 estoy
 estar
 VMIP1S0

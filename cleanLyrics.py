@@ -20,7 +20,7 @@ for file in files:
             for w in words:
                 if w not in banned_words.keys():
                     if len(w) > 2:
-                        write += w + " "
+                        write += w.lower() + " "
         write += '\n'
     with open("files/Lemma/"+ filename, 'w') as l:
         l.write(write)

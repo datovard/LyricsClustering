@@ -4,7 +4,7 @@ from os.path import isfile, join
 import math
 
 # Set the file path of our cleaned words files
-filepath = "Files/Cleaned/"
+filepath = "files/Cleaned/"
 
 # Getting names of all the files in the cleaned folder
 onlyfiles = [f for f in listdir(filepath) if isfile(join(filepath, f))]
@@ -23,20 +23,12 @@ for filename in onlyfiles:
         else:
             globalFreqs[key] += 1
 
-def whatisthis(s):
-    if isinstance(s, str):
-        print "ordinary string"
-    elif isinstance(s, unicode):
-        print "unicode string"
-    else:
-        print "not a string"
-
 # Looping every document again to calculate weights
-with open('Files/Weighted/totalWeights.csv', 'w') as csv:
+with open('files/Weighted/totalWeights.mat', 'w') as mat:
 
     # First line in csv file
-    csv.write( u'files,' + u','.join(globalFreqs.keys()).encode('ascii', 'backslashreplace')  )
-    csv.write("\n")
+    mat.write( str(len(onlyfiles)) + " " + str(len(globalFreqs)) )
+    mat.write("\n")
 
     # Every file in the folder
     for filename in onlyfiles:
@@ -54,15 +46,15 @@ with open('Files/Weighted/totalWeights.csv', 'w') as csv:
         # Checking the weights of the file onto the csv file
         for k in globalFreqs:
             if k in data:
-                weight_str += str(total_weights[k]) + ","
+                weight_str += str(total_weights[k]) + "\t"
             else:
-                weight_str += "0,"
+                weight_str += "0\t"
 
         # Write into the csv
-        csv.write( filename + "," + weight_str )
-        csv.write("\n")
+        mat.write( weight_str )
+        mat.write("\n")
 
         # Saving files
-        with open('Files/Weighted/' + filename, 'w') as outfile:
+        with open('files/Weighted/' + filename, 'w') as outfile:
             json.dump(total_weights, outfile)
 

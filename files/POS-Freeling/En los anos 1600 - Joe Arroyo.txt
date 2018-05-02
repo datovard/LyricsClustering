@@ -1,4 +1,4 @@
-Quiero
+quiero
 querer
 VMIP1S0
 contar
@@ -67,9 +67,9 @@ NCFS000
 vivió
 vivir
 VMIS3S0
-Cuando
 cuando
-NP00000
+cuando
+CS
 fin
 fin
 NCMS000

@@ -1,4 +1,4 @@
-Alguien
+alguien
 alguien
 PI0CS00
 jodió
@@ -52,9 +52,9 @@ VMIP2S0
 ocupar
 ocupar
 VMN0000
-Babel
 babel
-NP00000
+babel
+NCCS000
 dividió
 dividir
 VMIS3S0
@@ -112,9 +112,9 @@ VMSP2S0
 tú
 tú
 PP2CSN0
-Alguien
 alguien
-NP00000
+alguien
+PI0CS00
 tomó
 tomar
 VMIS3S0
@@ -163,9 +163,9 @@ VMIP3S0
 sed
 sed
 NCFS000
-Babel
 babel
-NP00000
+babel
+NCCS000
 plantó
 plantar
 VMIS3S0
@@ -214,9 +214,9 @@ PP1CP00
 entretenga
 entretener
 VMSP3S0
-Babel
 babel
-NP00000
+babel
+NCCS000
 olvidó
 olvidar
 VMIS3S0
