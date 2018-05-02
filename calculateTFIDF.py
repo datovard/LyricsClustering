@@ -18,10 +18,12 @@ for filename in onlyfiles:
 
     # Counting in how many documents there is an specific word
     for key in data:
-        if key not in globalFreqs:
-            globalFreqs[key] = 1
-        else:
-            globalFreqs[key] += 1
+        ############################
+        #
+        # Your code goes here
+        #
+        ############################
+
 
 # Looping every document again to calculate weights
 with open('files/Weighted/totalWeights.mat', 'w') as mat:
@@ -38,10 +40,11 @@ with open('files/Weighted/totalWeights.mat', 'w') as mat:
         total_weights = {}
         weight_str = ""
         for key in data:
-            tf = data[key]
-            df = globalFreqs[key]
-            weight = tf *  math.log1p(len(onlyfiles)/df)
-            total_weights[key] = weight
+            ############################
+            #
+            # Your code goes here
+            #
+            ############################
 
         # Checking the weights of the file onto the csv file
         for k in globalFreqs:
@@ -50,11 +53,7 @@ with open('files/Weighted/totalWeights.mat', 'w') as mat:
             else:
                 weight_str += "0\t"
 
-        # Write into the csv
+        # Write into the mat file
         mat.write( weight_str )
         mat.write("\n")
-
-        # Saving files
-        with open('files/Weighted/' + filename, 'w') as outfile:
-            json.dump(total_weights, outfile)
 
