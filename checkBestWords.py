@@ -7,7 +7,8 @@ files = (glob.glob("files/DataJson/*"))
 
 files = sorted(files)
 
-cluster = [4,0,3,5,1,5,2,2,0,6,1,6,4,3,6,5]
+# Example of cluster array
+# cluster = [4,0,3,5,1,5,2,2,0,6,1,6,4,3,6,5]
 
 final = {}
 
