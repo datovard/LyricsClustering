@@ -19,9 +19,17 @@ This file cleans the words that have been already processed in the *Lyrics Featu
 
 ### calculateTDIDF.py
 
-This file takes every word in every document and calculates it's weights using the TD-IDF function, it creates a weight matrix in a csv file called totalWeights.csv.
+This file takes every word in every document and calculates it's weights using the TD-IDF function, it creates a weight matrix in a mat file called totalWeights.mat.
 
 ![alt text](https://github.com/datovard/LyricsClustering/blob/joagranadosme/Images/equation.JPG "TD-IDF equation")
 
 Where `tf(d)` is the number of times that term `t` appears in document `d` and `df(t)`
 is the number of documents in the collection that term `t` occurs in.
+
+## Running the .mat file
+
+Just have to run the vcluster mode with Cluto with this command:
+
+```
+./vcluster {Path to project}/files/Weighted/totalWeights.mat 7 -clmethod=rbr -crfun=h2
+```
